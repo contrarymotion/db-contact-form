@@ -12,9 +12,8 @@ function send_contact_email(){
     $fileContent = file_get_contents($_FILES['file']['tmp_name']);
 
     if($fileError == UPLOAD_ERR_OK){
-      //Processes your file here
-      $target_dir = WP_PLUGIN_DIR . '/db-contact-form/uploaded-files/';
-      $target_file = $target_dir . basename($fileName);
+      $db_form_uploads = ABSPATH . 'wp-content/uploads/db-form-uploads/';
+      $target_file = $db_form_uploads . basename($fileName);
       move_uploaded_file($_FILES['file']['tmp_name'], $target_file);
    }
 
