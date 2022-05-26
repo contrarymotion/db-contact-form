@@ -1,9 +1,4 @@
 <?php
-
-
-ini_set('display_errors', 1); 
-error_reporting(E_ALL);
-
 /**
  * Plugin Name:       DB Simple Contact Form
  * Plugin URI:        https:www.db-websites.com
@@ -15,6 +10,9 @@ error_reporting(E_ALL);
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Update URI:        https://example.com/my-plugin/
  */
+
+// ini_set('display_errors', 1); 
+// error_reporting(E_ALL);
 
 function db_contact_form_options_page()
 {
@@ -29,9 +27,12 @@ function db_contact_form_options_page()
 }
 add_action('admin_menu', 'db_contact_form_options_page');
 
+if ( ! is_dir( ABSPATH . 'wp-content/uploads/db-form-uploads' ) ) {
+    wp_mkdir_p( ABSPATH . 'wp-content/uploads/db-form-uploads' );
+}
+
 require 'send_form.php';
 require 'db-form-html.php';
-
 
 function load_contact_form_styles()
 {
@@ -98,6 +99,3 @@ function contact_form_settings_html()
     </div>
 <?php
 }
-
-
-
