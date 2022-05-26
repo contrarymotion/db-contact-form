@@ -1,0 +1,13 @@
+[22-May-2022 13:55:12 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_option() in /home1/dbwebtes/public_html/wp-content/plugins/db-contact-form/send_form.php:21
+Stack trace:
+#0 {main}
+  thrown in /home1/dbwebtes/public_html/wp-content/plugins/db-contact-form/send_form.php on line 21
+[22-May-2022 14:17:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home1/dbwebtes/public_html/wp-content/plugins/db-contact-form/db-contact-form.php:26
+Stack trace:
+#0 /home1/dbwebtes/public_html/wp-content/plugins/db-contact-form/send_form.php(3): include()
+#1 {main}
+  thrown in /home1/dbwebtes/public_html/wp-content/plugins/db-contact-form/db-contact-form.php on line 26
+[22-May-2022 14:43:34 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_option() in /home1/dbwebtes/public_html/wp-content/plugins/db-contact-form/send_form.php:21
+Stack trace:
+#0 {main}
+  thrown in /home1/dbwebtes/public_html/wp-content/plugins/db-contact-form/send_form.php on line 21
