@@ -28,8 +28,6 @@ function submit_contact_form_callback(data){
     
     var jdata = JSON.parse(data);
 
-    console.log(jdata.file)
-
     if(jdata.success === 1){
         contactForm.innerHTML = '<div style="background-color: #fff;"><p style="color:red; text-align: center;">'+jdata.message+'</p></div>';
     }
