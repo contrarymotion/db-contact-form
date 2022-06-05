@@ -43,6 +43,8 @@ function send_contact_email(){
     echo json_encode($return);
 
     unlink( $target_file );
+    
+    die();
   
   }
 }
