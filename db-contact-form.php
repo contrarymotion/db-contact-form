@@ -56,7 +56,7 @@ function contact_form_settings_html()
     $subject = get_option('subject', '');
     $user_message = get_option('user-message', '');
 ?>
-    <div class="wrap">
+    <div id="db-admin" class="wrap">
         <form method="post" action="">
             <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 
