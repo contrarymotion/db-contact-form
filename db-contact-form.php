@@ -58,10 +58,8 @@ function contact_form_settings_html()
     $user_message = get_option('user-message', '');
 ?>
     <div id="db-admin" class="wrap">
+        <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
         <form method="post" action="">
-            <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
-            <p>David is Awesome!</p>
-
             <div id="act_settings_container">
                 <div id="tab_information_container">
                     
