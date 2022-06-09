@@ -1,14 +1,15 @@
 <?php
 /**
  * Plugin Name:       DB Simple Contact Form
- * Plugin URI:        https:www.db-websites.com
- * Description:       Add a contact form to your website
+ * Plugin URI:        https://github.com/dboden85/db-contact-form
+ * Description:       Add a simple contact form to your website
  * Version:           1.0
- * Author:            David
- * Author URI:        https:www.db-websites.com
+ * Author:            David Boden
+ * Author URI:        https://www.db-websites.com
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Update URI:        https://example.com/my-plugin/
+ * Update URI:        https://github.com/dboden85/db-contact-form
+ * GitHub Plugin URI:  https://github.com/dboden85/db-contact-form
  */
 
 // ini_set('display_errors', 1); 
