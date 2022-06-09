@@ -1,0 +1,33 @@
+form{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    background-color: darkblue;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 50px;
+}
+
+h1, h2, label{
+    color: #fff;
+}
+
+.col div{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 20px;
+}
+
+input{
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+textarea{
+    font-size: 20px;
+    margin-bottom: 20px;
+}

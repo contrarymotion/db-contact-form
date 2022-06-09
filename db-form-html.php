@@ -2,6 +2,21 @@
 
 // require 'send_form.php';
 
+function load_contact_form_styles()
+{
+    // wp_register_style('contact-form-styles', plugin_dir_url('db-contact-form') . '/db-contact-form/contact-form.css', array(), false, 'all');
+
+    wp_enqueue_style('contact-form-styles', plugins_url( '/contact-form.css', __FILE__ ));
+}
+add_action('wp_enqueue_scripts', 'load_contact_form_styles');
+
+function load_contact_form_scripts()
+{
+    wp_register_script('contact-form-scripts', plugins_url( '/contact-form.js', __FILE__ ), array('jquery'), 1, true);
+    wp_enqueue_script('contact-form-scripts');
+}
+add_action('wp_enqueue_scripts', 'load_contact_form_scripts');
+
 function db_contact_form(){
     $db_form_html = '<div id="form-container">';
 

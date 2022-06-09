@@ -31,23 +31,13 @@ if ( ! is_dir( ABSPATH . 'wp-content/uploads/db-form-uploads' ) ) {
     wp_mkdir_p( ABSPATH . 'wp-content/uploads/db-form-uploads' );
 }
 
+function add_contact_form_admin_styles(){
+    wp_enqueue_style('contact-form-admin-styles', plugins_url( '/admin-menu-style.css', __FILE__ ));
+}
+add_action('admin_enqueue_scripts', 'add_contact_form_admin_styles');
+
 require 'send_form.php';
 require 'db-form-html.php';
-
-function load_contact_form_styles()
-{
-    // wp_register_style('contact-form-styles', plugin_dir_url('db-contact-form') . '/db-contact-form/contact-form.css', array(), false, 'all');
-
-    wp_enqueue_style('contact-form-styles', plugins_url( '/contact-form.css', __FILE__ ));
-}
-add_action('wp_enqueue_scripts', 'load_contact_form_styles');
-
-function load_contact_form_scripts()
-{
-    wp_register_script('contact-form-scripts', plugins_url( '/contact-form.js', __FILE__ ), array('jquery'), 1, true);
-    wp_enqueue_script('contact-form-scripts');
-}
-add_action('wp_enqueue_scripts', 'load_contact_form_scripts');
 
 function contact_form_settings_html()
 {
@@ -76,7 +66,7 @@ function contact_form_settings_html()
                     <div class="settings_tab_info open">
                     <h2>Contact Form Settings</h2>
 
-                        <div class="row">
+                        <div class="col">
                             <div>
 
                                 <label for="to-email">Email (to receive the form information)</label>
@@ -86,7 +76,7 @@ function contact_form_settings_html()
                                 <input type="text" name="subject" value="<?php print $subject ?>"/>
 
                                 <label for="user-message">Message to display when form is submitted</label>
-                                <textarea name="user-message"><?php print $user_message ?></textarea>
+                                <textarea rows="5" name="user-message"><?php print $user_message ?></textarea>
 
                             </div>
 
