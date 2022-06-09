@@ -6,16 +6,19 @@ function send_contact_email(){
   {
 
     //print_r($_FILES);
-    $fileName = $_FILES['file']['name'];
-    $fileType = $_FILES['file']['type'];
-    $fileError = $_FILES['file']['error'];
-    $fileContent = file_get_contents($_FILES['file']['tmp_name']);
 
-    if($fileError == UPLOAD_ERR_OK){
-      $db_form_uploads = ABSPATH . 'wp-content/uploads/db-form-uploads/';
-      $target_file = $db_form_uploads . basename($fileName);
-      move_uploaded_file($_FILES['file']['tmp_name'], $target_file);
-   }
+    if (! empty($_FILES)){
+      $fileName = $_FILES['file']['name'];
+      $fileType = $_FILES['file']['type'];
+      $fileError = $_FILES['file']['error'];
+      $fileContent = file_get_contents($_FILES['file']['tmp_name']);
+
+      if($fileError == UPLOAD_ERR_OK){
+        $db_form_uploads = ABSPATH . 'wp-content/uploads/db-form-uploads/';
+        $target_file = $db_form_uploads . basename($fileName);
+        move_uploaded_file($_FILES['file']['tmp_name'], $target_file);
+      }
+    }
 
     // get info from post submit 
     $fname = $_POST['fname'];
@@ -32,7 +35,11 @@ function send_contact_email(){
     $message .= "Email: ".$email."\n";
     $message .= "Phone: ".$phone."\n";
 
-    $attach = $target_file;
+    if(isset($target_file)){
+      $attach = $target_file;
+    }else{
+      $attach = [];
+    }
 
 
     wp_mail($to, $subject, $message, $headers, $attach);
@@ -42,7 +49,9 @@ function send_contact_email(){
 
     echo json_encode($return);
 
-    unlink( $target_file );
+    if(! empty($_FILES)){
+      unlink( $target_file );
+    }
     
     die();
   
