@@ -31,3 +31,7 @@
     font-size: 20px;
     margin-bottom: 20px;
 }
+
+#db-admin #db-settings-submit-button{
+    height: initial;
+}
