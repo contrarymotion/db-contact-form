@@ -60,6 +60,7 @@ function contact_form_settings_html()
     <div id="db-admin" class="wrap">
         <form method="post" action="">
             <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
+            <p>David is Awesome!</p>
 
             <div id="act_settings_container">
                 <div id="tab_information_container">
