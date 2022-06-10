@@ -9,7 +9,7 @@
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Update URI:        https://github.com/dboden85/db-contact-form
- * GitHub Plugin URI:  dboden85/db-contact-form
+ * GitHub Plugin URI: https://github.com/dboden85/db-contact-form
  */
 
 // ini_set('display_errors', 1); 
