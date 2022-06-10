@@ -3,7 +3,7 @@
  * Plugin Name:       DB Simple Contact Form
  * Plugin URI:        https://github.com/dboden85/db-contact-form
  * Description:       Add a simple contact form to your website
- * Version:           1.0
+ * Version:           0.1
  * Author:            David Boden
  * Author URI:        https://www.db-websites.com
  * License:           GPL v2 or later
