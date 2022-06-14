@@ -20,6 +20,8 @@ function submitContactForm(){
     fd.append('phone',jQuery('#user-phone').val());
     fd.append('file', jQuery('#files')[0].files[0]);
     js_submit(fd);
+    }else{
+        errorMessage('Error: please double check your inputs!');
     }
     
 }
@@ -106,4 +108,18 @@ function isFormReady(){
 
     return isReady;
 
+}
+
+function errorMessage(err){
+    const errorContainer = document.querySelector('.form-error');
+    errorContainer.style.display = 'block';
+
+    const formSending = document.querySelector('.form-sending');
+
+    if(formSending.style.display === 'block'){
+        formSending.style.display = 'none';
+    }
+    
+
+    errorContainer.innerHTML = '<p>'+err+'</p>';
 }
