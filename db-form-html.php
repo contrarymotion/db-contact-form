@@ -53,12 +53,11 @@ function db_contact_form(){
     $db_form_html .= '<div>';
     $db_form_html .= '<label>Upload Images</label>';
     $db_form_html .= '<input id="files" name="files" type="file" accept="image/png, image/jpeg"/>';
-    $db_form_html .= '<small>.jpg and .png only</small>';      
     $db_form_html .= '</div>';
 
-    $db_form_html .= '<div class="form-error"></div>';
-
     $db_form_html .= '<input id="submit" type="submit" name="contact-submit" value="Submit" onclick="submitContactForm()"/>';
+
+    $db_form_html .= '<div class="form-error"></div>';
 
     $db_form_html .= '<div class="form-sending">Sending.....</div>';
 
