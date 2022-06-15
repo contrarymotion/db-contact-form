@@ -12,8 +12,8 @@
  * GitHub Plugin URI: https://github.com/dboden85/db-contact-form
  */
 
-// ini_set('display_errors', 1); 
-// error_reporting(E_ALL);
+ini_set('display_errors', 1); 
+error_reporting(E_ALL);
 
 function db_contact_form_options_page()
 {
