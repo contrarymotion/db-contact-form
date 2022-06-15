@@ -64,7 +64,6 @@ function contact_form_settings_html()
                 <div id="tab_information_container">
                     
                     <div class="settings_tab_info open">
-                    <h2>Contact Form Settings</h2>
 
                         <div class="col">
                             <div>
@@ -86,6 +85,9 @@ function contact_form_settings_html()
             </div>
             <input type="submit" name="submit-settings" value="Submit Settings" class="button button-primary" id="db-settings-submit-button"/>
         </form> 
+        <div class="success">
+            <p>Save Successfull</p>
+        </div>
     </div>
 <?php
 }
