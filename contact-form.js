@@ -21,7 +21,7 @@ function submitContactForm(){
     fd.append('file', jQuery('#files')[0].files[0]);
     js_submit(fd);
     }else{
-        errorMessage('Error: please double check your inputs!');
+        errorMessage('Error: What the fuck just happened?!');
     }
     
 }
@@ -30,8 +30,10 @@ function submit_contact_form_callback(data){
     
     var jdata = JSON.parse(data);
 
-    if(jdata.success === 1){
+    if(jdata.success){
         contactForm.innerHTML = '<div style="background-color: #fff;"><p style="color:red; text-align: center;">'+jdata.message+'</p></div>';
+    }else{
+        errorMessage(jdata.message);
     }
 
 }
