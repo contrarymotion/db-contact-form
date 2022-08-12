@@ -1,11 +1,16 @@
+#db-admin.wrap{
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+
+
 #db-admin form{
     width: 100%;
-    max-width: 700px;
     height: auto;
-    background-color: darkblue;
-    border: 2px solid #fff;
     border-radius: 5px;
-    padding: 50px;
 }
 
 #db-admin h1, #db-admin h2, #db-admin label{

@@ -22,7 +22,7 @@ function db_contact_form(){
 
     $db_form_html .= '<form id="contact-form" enctype="multipart/form-data" method="post" name="myemailform" action="send_form.php">';
 
-    $db_form_html .= '<div class="flex-row">';
+    $db_form_html .= '<div>';
     $db_form_html .= '<div class="flex-col required">';
     $db_form_html .= '<label for="fname">First Name</label>';
     $db_form_html .= '<input id="fname" type="text" name="fname" value="David"/>';
@@ -36,7 +36,7 @@ function db_contact_form(){
     $db_form_html .= '</div>';
     $db_form_html .= '</div>';
 
-    $db_form_html .= '<div class="flex-row">';
+    $db_form_html .= '<div>';
     $db_form_html .= '<div class="flex-col required">';
     $db_form_html .= '<label for="email">Email</label>';
     $db_form_html .= '<input id="user-email" type="email" name="email" value="test@gmail.com"/>';

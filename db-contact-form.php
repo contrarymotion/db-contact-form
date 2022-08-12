@@ -84,10 +84,7 @@ function contact_form_settings_html()
                 </div>
             </div>
             <input type="submit" name="submit-settings" value="Submit Settings" class="button button-primary" id="db-settings-submit-button"/>
-        </form> 
-        <div class="success">
-            <p>Save Successfull</p>
-        </div>
+        </form>
     </div>
 <?php
 }
