@@ -52,7 +52,7 @@ function contact_form_settings_html()
 
     }
 
-    //variables to hold widget settings
+    //variables to hold contact form settings
     $to_email = get_option('to-email', '');
     $subject = get_option('subject', '');
     $user_message = get_option('user-message', '');
